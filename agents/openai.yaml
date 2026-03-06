@@ -1,0 +1,4 @@
+interface:
+  display_name: "WebCrawler"
+  short_description: "Crawl websites into JSON and HTML previews"
+  default_prompt: "Use $webcrawler to crawl one or more URLs into machine-readable JSON and human-readable HTML previews."

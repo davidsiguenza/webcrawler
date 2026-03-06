@@ -1,0 +1,10 @@
+{
+  "name": "storefront-template-fixture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "node ./scripts/typecheck.js",
+    "build": "node ./scripts/build.js",
+    "push": "node ./scripts/push.js"
+  }
+}
