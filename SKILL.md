@@ -19,11 +19,36 @@ Use it for:
 - storefront homepage branding analysis
 - storefront branding workflows that patch a target project
 
+## When to Use
+
+Use this skill when the user wants to:
+
+- crawl one public page and keep both JSON and HTML outputs
+- crawl multiple public pages from direct URLs or a `urls.txt` file
+- inspect extracted image candidates and nearby text visually
+- analyze a storefront homepage for branding assets
+- generate outputs that can be consumed by other agents or automation
+
+## When Not to Use
+
+Do not use this skill when:
+
+- the task is only summarization of text the user already provided
+- the site requires login, authentication, or a fragile interactive flow the user has not prepared for
+- the user only needs one quick fact and does not need crawl artifacts
+
 ## Output Rules
 
 - Always write artifacts into the user's workspace, not into the skill directory.
 - Prefer a dedicated output folder such as `./outputs/webcrawler/` unless the user gives a path.
 - After each run, report the most important artifact paths back to the user.
+
+## Steps
+
+1. Choose the command family that matches the user request.
+2. Write outputs into the user's workspace, not the skill directory.
+3. Run `scripts/run-webcrawler.sh ...` with the required arguments.
+4. Return the key artifact paths and mention any failures or missing outputs.
 
 ## Command Selection
 
